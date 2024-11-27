@@ -7,7 +7,7 @@ on:
     types: [opened, synchronize, reopened]
     branches:
       - develop
-      - master
+      - main
 
 jobs:
   add_labels:
@@ -39,7 +39,7 @@ jobs:
           elif [[ "$branch" == release-* ]]; then
             labels+=("release")
           fi
-          if [[ "$branch" == "master" ]]; then
+          if [[ "$branch" == "main" ]]; then
             labels+=("deploy")
           elif [[ "$branch" == "develop" ]]; then
             labels+=("develop")
