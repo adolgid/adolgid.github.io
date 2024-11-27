@@ -1,8 +1,5 @@
-// Header nav with left logo, left menu, full width submenus toggle, right login button and all with tailwind css
-
 import { Link } from "react-router-dom";
 import { useHeaderLogic } from "./useHeaderLogic";
-import Button from "../../components/Button/Button";
 import Icon from "../../components/Icon/Icon";
 import { motion } from "framer-motion";
 import { APP_TITLE } from "../../config/const";
@@ -31,7 +28,7 @@ export default function Header() {
                 to="/aboutme"
                 className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-600 hover:text-zinc-600"
               >
-                About Me
+                biografía
               </Link>
             </div>
             <div className="mr-2 flex md:hidden">
@@ -60,7 +57,7 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                     className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-zinc-600"
                   >
-                    About Me
+                    biografía
                   </Link>
                 </div>
               </motion.div>

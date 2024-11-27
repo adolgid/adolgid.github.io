@@ -14,15 +14,15 @@ export const Notification: React.FC<Props> = ({ title }) => {
       animate={{ y: isNotificationOpen ? 0 : 100 }}
       exit={{ y: 100 }}
       transition={{ duration: 0.5 }}
-      className="fixed bottom-0 left-0 z-20 w-full"
+      className="fixed bottom-0 right-0 z-20 w-auto"
     >
-      <div className="bg-gradient-to-br from-indigo-500 to-purple-600 px-4 py-3">
-        <div className="text-white rounded-full flex items-center space-x-2">
-          <span>{title}</span>
+      <div className="px-4 py-3">
+        <div className="text-zinc-300 rounded-full flex items-center space-x-2">
+          {" "}
           <button className="text-white" onClick={onHandleCloseNotification}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              className="h-4 w-4 text-zinc-300"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -35,6 +35,7 @@ export const Notification: React.FC<Props> = ({ title }) => {
               />
             </svg>
           </button>
+          <span>{title}</span>
         </div>
       </div>
     </motion.div>
