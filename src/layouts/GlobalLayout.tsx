@@ -1,12 +1,10 @@
 import "./styles/index.css";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "./Header/Header";
-import Loading from "../components/Loading/Loading";
 import Footer from "./Footer/Footer";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function GlobalLayout() {
-  const [isLoading, setIsLoading] = useState(false);
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -14,19 +12,13 @@ export default function GlobalLayout() {
   }, [pathname]);
 
   return (
-    <div className="global-layout min-h-screen">
+    <div className="global-layout min-h-screen h-full">
       <Header />
-      <div>
-        {isLoading ? (
-          <Loading />
-        ) : (
-          <main id="detail" className="main pt-16 md:pt-0">
-            <div className="min-w-full min-h-screen">
-              <Outlet />
-            </div>
-          </main>
-        )}
-      </div>
+      <main id="detail" className="main pt-16 md:pt-0 min-w-full min-h-screen">
+        <div className="min-w-full min-h-screen">
+          <Outlet />
+        </div>
+      </main>
       <Footer />
     </div>
   );
