@@ -1,8 +1,8 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import routes from "./routes";
 
 export default function MainRouter() {
-  const router = createBrowserRouter(routes, {
+  const router = createHashRouter(routes, {
     future: {
       v7_relativeSplatPath: true,
       v7_fetcherPersist: true,

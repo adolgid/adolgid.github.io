@@ -1,0 +1,64 @@
+# Workflow to add labels to pull requests based on branch name and title
+name: Check labels
+
+# Trigger only on specific pull request events to ensure pull request data is available
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - develop
+      - master
+
+jobs:
+  add_labels:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Add labels
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Prepare the labels
+          labels=()
+          title="${{ github.event.pull_request.title }}"
+          branch="${{ github.event.pull_request.head.ref }}"
+
+          # Determine which labels to apply
+          if [[ "$title" == WIP* ]]; then
+            labels+=("WIP")
+          fi
+          if [[ "$branch" == fix-* ]]; then
+            labels+=("fix")
+          elif [[ "$branch" == feature-* ]]; then
+            labels+=("feature")
+          elif [[ "$branch" == hotfix-* ]]; then
+            labels+=("hotfix")
+          elif [[ "$branch" == release-* ]]; then
+            labels+=("release")
+          fi
+          if [[ "$branch" == "master" ]]; then
+            labels+=("deploy")
+          elif [[ "$branch" == "develop" ]]; then
+            labels+=("develop")
+          fi
+          if [[ "$title" == *sync* ]]; then
+            labels+=("sync")
+          fi
+
+          # Convert labels array to JSON format
+          if [ ${#labels[@]} -ne 0 ]; then
+            labels_json=$(printf '%s\n' "${labels[@]}" | jq -R . | jq -s .)
+
+            # Make the API request to add labels
+            curl -X POST \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/labels \
+              -d "$labels_json"
+            echo "Labels added: ${labels[@]}"
+          else
+            echo "No labels to add."
+          fi

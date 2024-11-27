@@ -10,5 +10,4 @@ export default defineConfig({
       plugins: [tailwindcss(), autoprefixer()],
     },
   },
-  base: "/adolgid.github.io/", // Ensure this matches your GitHub Pages URL path
 });

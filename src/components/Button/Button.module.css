@@ -1,0 +1,4 @@
+/* example.module.css */
+.button {
+  @apply flex items-center font-semibold rounded-lg shadow-md transition duration-300 ease-in-out;
+}

@@ -1,0 +1,31 @@
+/* Loading module css  */
+
+.loadingContainer {
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-white h-screen w-screen;
+}
+
+.loadingSpinner {
+  @apply animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-indigo-600;
+}
+
+.loadingDot {
+  @apply relative w-4 h-4 rounded-full animate-pulse bg-blue-600 mx-4;
+}
+
+.loadingDotSpinner {
+  @apply animate-spin w-10 h-10 rounded-full animate-spin border-y border-solid border-t-transparent shadow-md mx-3;
+}
+
+.dot1 {
+  @apply border-indigo-200;
+}
+.dot2 {
+  @apply border-indigo-400;
+}
+.dot3 {
+  @apply border-indigo-600;
+}
+
+.loadingInnerContainer {
+  @apply inset-0 z-50 flex items-center justify-center bg-white h-auto p-10 md:p-32 w-full;
+}

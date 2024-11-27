@@ -1,0 +1,29 @@
+/* Card module css */
+
+.fontStyle {
+  @apply font-sans text-slate-600 text-sm font-bold leading-6;
+}
+
+.cardContainer {
+  @apply flex items-stretch gap-4 w-full bg-zinc-900 border border-indigo-600 rounded-lg shadow-inner shadow-zinc-800 overflow-hidden;
+}
+
+.cardRow {
+  @apply py-4 flex-1 flex items-center justify-center shadow-lg rounded-lg;
+}
+
+.cardPadding {
+  @apply p-6;
+}
+
+.cardTitleIcon {
+  @apply font-semibold text-3xl underline text-slate-500 flex items-center justify-between;
+}
+
+.cardIcon {
+  @apply text-6xl;
+}
+
+.cardDescription {
+  @apply text-slate-700 mt-2;
+}
