@@ -1,17 +1,21 @@
-export default function Footer() {
+import Icon from "../../components/Icon/Icon";
+
+export default function Footer(): JSX.Element {
   return (
-    <footer className="bg-zinc-100 shadow-inner text-black">
-      <div className="max-w-full py-12 px-4 sm:px-6 lg:px-8">
-        <p className="text-center">
-          Copyirght 2024 - Adolfo Nilson Gidoni, Created by{" "}
-          <a
-            href="https://juani.dev"
-            className="text-indigo-600 font-semibold uppercase"
-            target="_BLANK"
-          >
-            juani.dev
-          </a>
-        </p>
+    <footer className="bg-white shadow-md h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div className="flex justify-center items-center h-full">
+          <div className="flex items-center space-x-2 text-gray-600">
+            <span>Created with</span>
+            <Icon name="love" className="h-4 w-4 text-red-500" />
+            <span>
+              by{" "}
+              <a href="https://juani.dev" target="_BLANK">
+                juani.dev
+              </a>
+            </span>
+          </div>
+        </div>
       </div>
     </footer>
   );

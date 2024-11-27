@@ -8,7 +8,7 @@ validateEnvironment();
 export default function App() {
   return (
       <RepositoriesContextProvider>
-        <Notification title="Site under construction. 👍" />
+        <Notification title="Página en construcción. 👍" />
         <MainRouter />
       </RepositoriesContextProvider>
   );
