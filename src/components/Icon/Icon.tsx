@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { IconContext } from "../../repositories-context/IconContext";
+import { IconContext } from "../../contexts/IconContext";
 
 interface IconProps {
   name: string;

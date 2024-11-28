@@ -3,4 +3,4 @@
  *
  * @constant {string} APP_TITLE - The main title of the application.
  */
-export const APP_TITLE = "Adolfo N. Gidoni";
+export const APP_TITLE = "ANG";
