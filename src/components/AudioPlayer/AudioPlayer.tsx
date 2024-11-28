@@ -125,7 +125,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc, text }) => {
         className="cursor-pointer text-slate-800 hover:text-slate-500"
       >
         {text && (
-          <span className="text3xl md:text-5xl font-wrap md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 font-hoves-extended-extralight">
+          <span className="text-3xl md:text-5xl font-wrap md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 font-hoves-extended-extralight">
             {isPlayerActive && isPlaying ? "Pause" : text}
           </span>
         )}
