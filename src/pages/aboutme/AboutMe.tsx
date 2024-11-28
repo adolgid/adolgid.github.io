@@ -10,15 +10,6 @@ export default function AboutMe() {
   return (
     <>
       <div className="flex">
-        <div className="w-full flex flex-col items-center justify-between bg-white">
-          <div className="max-w-full p-6 md:p-12">
-            <h1 className="text-3xl md:text-5xl font-wrap lg:text-7xl font-bold text-slate-800 mb-4 md:mb-6 font-hoves-extended-extralight">
-              Adolfo Nilson Gidoni
-            </h1>
-          </div>
-        </div>
-      </div>
-      <div className="flex">
         <div className="w-full flex items-center justify-between bg-white">
           <div className="w-1/2 p-6 md:p-3">
             <img

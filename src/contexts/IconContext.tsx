@@ -9,7 +9,7 @@ import {
   FaUser,
   FaVolumeUp,
   FaVolumeMute,
-  FaArrowLeft,
+  FaHome,
 } from "react-icons/fa";
 
 const icons: Record<string, IconType> = {
@@ -21,7 +21,7 @@ const icons: Record<string, IconType> = {
   bio: FaUser,
   volumeUp: FaVolumeUp,
   mute: FaVolumeMute,
-  left: FaArrowLeft,
+  home: FaHome,
 };
 
 export const IconContext = React.createContext(icons);
