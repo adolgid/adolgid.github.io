@@ -3,7 +3,6 @@ import image2 from "../../assets/images/2.jpeg";
 import perfil from "../../assets/images/perfil.png";
 import music from "../../assets/audio/music.mp3";
 import { AudioPlayer } from "../../components/AudioPlayer/AudioPlayer";
-import { ImageCarousel } from "../../components/ImageCarousel/ImageCarousel";
 
 const images: string[] = [image1, image2, perfil];
 
@@ -13,7 +12,7 @@ export default function AboutMe() {
       <div className="flex">
         <div className="w-full flex flex-col items-center justify-between bg-white">
           <div className="max-w-full p-6 md:p-12">
-            <h1 className="text-4xl md:text-5xl font-wrap md:text-5xl lg:text-7xl font-bold text-slate-800 mb-4 md:mb-6 font-hoves-extended-extralight">
+            <h1 className="text-3xl md:text-5xl font-wrap lg:text-7xl font-bold text-slate-800 mb-4 md:mb-6 font-hoves-extended-extralight">
               Adolfo Nilson Gidoni
             </h1>
           </div>
