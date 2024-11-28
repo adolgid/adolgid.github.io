@@ -35,9 +35,13 @@ export default function Landing() {
         </div>
         <div className="w-full md:w-1/2 flex flex-col items-center justify-between bg-white">
           <div className="max-w-full p-6 md:p-12">
-            <h1 className="text-5xl font-wrap md:text-5xl lg:text-7xl font-bold text-slate-800 mb-4 md:mb-6 font-hoves-extended-extralight">
+            <a
+              href="https://paypal.me/juangidoni"
+              target="_BLANK"
+              className="text-5xl font-wrap md:text-5xl lg:text-7xl font-bold text-slate-800 hover:text-slate-500 mb-4 md:mb-6 font-hoves-extended-extralight"
+            >
               Invest
-            </h1>
+            </a>
           </div>
         </div>
       </div>
