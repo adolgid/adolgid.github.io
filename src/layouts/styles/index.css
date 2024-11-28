@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Hoves Regular";
+    src: url("../../assets/fonts/TTHoves_Regular.ttf") format("woff2");
+  }
+  @font-face {
+    font-family: "Hoves Light";
+    src: url("../../assets/fonts/TTHoves_Light.ttf") format("woff2");
+  }
+  @font-face {
+    font-family: "Hoves ExtraLight";
+    src: url("../../assets/fonts/TTHoves_ExtraLight.ttf") format("woff2");
+  }
+  @font-face {
+    font-family: "Hoves Extended ExtraLight";
+    src: url("../../assets/fonts/TTHoves_ExtendedExtraLight.ttf")
+      format("woff2");
+  }
+  @font-face {
+    font-family: "Hoves Condensed ExtraLight";
+    src: url("../../assets/fonts/TTHoves_CondensedExtraLight.ttf")
+      format("woff2");
+  }
+}
