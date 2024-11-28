@@ -29,7 +29,7 @@ export default function Header() {
                 className="flex flex-col justify-center items-center px-1 pt-1 text-sm font-medium text-gray-600 hover:text-zinc-600"
               >
                 <Icon name="bio" className="block h-6 w-6" />
-                <span>biografía</span>
+                <span className="text-xs">biografía</span>
               </Link>
             </div>
           </div>
