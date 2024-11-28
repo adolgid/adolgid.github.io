@@ -26,9 +26,10 @@ export default function Header() {
             <div className="mr-2 flex md:hidden space-x-4 py-2">
               <Link
                 to="/aboutme"
-                className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-600 hover:text-zinc-600"
+                className="flex flex-col justify-center items-center px-1 pt-1 text-sm font-medium text-gray-600 hover:text-zinc-600"
               >
                 <Icon name="bio" className="block h-6 w-6" />
+                <span>biografía</span>
               </Link>
             </div>
           </div>
