@@ -9,7 +9,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 ">
             <div className="flex items-center justify-center">
               <Link to="/" className="flex items-center justify-center">
-                <span className="ml-2 text-3xl font-bold text-slate-600 uppercase font-hoves-light">
+                <span className="ml-2 text-2xl md:text-3xl font-bold text-slate-600 uppercase font-hoves-light">
                   Adolfo Nilson Gidoni
                 </span>
               </Link>
