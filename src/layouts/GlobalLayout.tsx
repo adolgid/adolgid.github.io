@@ -12,10 +12,10 @@ export default function GlobalLayout() {
   }, [pathname]);
 
   return (
-    <div className="global-layout min-h-screen h-full">
+    <div className="global-layout h-full">
       <Header />
       <main id="detail" className="main pt-16 md:pt-0 min-w-full min-h-screen">
-        <div className="min-w-full min-h-screen">
+        <div className="min-w-full ">
           <Outlet />
         </div>
       </main>

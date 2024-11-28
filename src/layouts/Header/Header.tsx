@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
 import Icon from "../../components/Icon/Icon";
-import { APP_TITLE } from "../../config/const";
 
 export default function Header() {
   return (
-    <header className="relative shadow z-20 bg-zinc-100">
-      <nav className="w-full fixed md:relative shadow-lg z-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-zinc-100 w-full">
+    <header className="relative shadow z-20 bg-white">
+      <nav className="w-full fixed md:relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white w-full">
           <div className="flex justify-between h-16 ">
             <div className="flex">
               <Link to="/" className="flex items-center">
                 <span className="ml-2 text-3xl font-bold text-slate-600 uppercase font-hoves-light">
-                  {APP_TITLE}
+                  <Icon name="left" />
                 </span>
               </Link>
             </div>

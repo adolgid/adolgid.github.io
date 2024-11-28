@@ -1,57 +1,47 @@
-import image1 from "../../assets/images/1.jpeg";
-import image2 from "../../assets/images/2.jpeg";
 import perfil from "../../assets/images/perfil.png";
-import music from "../../assets/audio/music.mp3";
-import { AudioPlayer } from "../../components/AudioPlayer/AudioPlayer";
-import { ImageCarousel } from "../../components/ImageCarousel/ImageCarousel";
-
-const images: string[] = [image1, image2, perfil];
 
 export default function Landing() {
   return (
     <>
       <div className="flex">
-        <div className="w-full md:w-1/2 flex flex-col items-center justify-between bg-white">
-          <div className="max-w-full p-6 md:p-12">
-            <h1 className="text-4xl md:text-5xl font-wrap md:text-5xl lg:text-7xl font-bold text-slate-800 mb-4 md:mb-6 font-hoves-extended-extralight">
-              Experto en síntesis sensorial. Improvisador desde 1993
-              <br></br>
-              Artista 2025
+        <div className="w-full md:w-1/2 flex flex-col items-center justify-end md:justify-center bg-white">
+          <div className="max-w-full p-6 md:p-12 ">
+            <h1 className="text-2xl md:text-5xl font-wrap md:text-5xl lg:text-7xl font-bold text-slate-800 mb-4 md:mb-6 font-hoves-extended-extralight">
+              Fundador innato
             </h1>
           </div>
         </div>
         <div className="w-full md:w-1/2 flex items-center justify-center bg-white">
           <div className="object-cover h-full w-full">
-            <ImageCarousel images={images} interval={400} />
+            <img
+              src={perfil}
+              className="w-full h-full object-fill"
+              alt="Adolfo Nilson Gidoni"
+            />
           </div>
         </div>
       </div>
-      <div className="flex">
-        <div className="w-full md:w-1/2 flex flex-col items-center justify-between bg-white">
-          <div className="max-w-full p-6 md:p-12">
-            <AudioPlayer audioSrc={music} text="Play" />
-          </div>
+      <div className="flex flex-col">
+        <div className="w-full flex items-center md:justify-between justify-between bg-white pt-6 px-6">
+          <h1 className="text-2xl md:text-5xl font-wrap md:text-5xl lg:text-7xl font-bold text-slate-800 mb-4 md:mb-6 font-hoves-extended-extralight">
+            Experto en síntesis <br></br>sensorial.
+          </h1>
+          <h1 className="text-2xl md:text-5xl font-wrap md:text-5xl lg:text-7xl font-bold text-slate-800 mb-4 md:mb-6 font-hoves-extended-extralight">
+            artista
+          </h1>
         </div>
-        <div className="w-full md:w-1/2 flex flex-col items-center justify-between bg-white">
-          <div className="max-w-full p-6 md:p-12">
-            <a
-              href="https://paypal.me/juangidoni"
-              target="_BLANK"
-              className="text-3xl md:text-5xl font-wrap md:text-5xl lg:text-7xl font-bold text-slate-800 hover:text-slate-500 mb-4 md:mb-6 font-hoves-extended-extralight"
-            >
-              Invest
-            </a>
-          </div>
+        <div className="w-full flex items-center justify-end bg-white pt-3 pr-6"></div>
+        <div className="w-full flex items-center justify-start bg-white pt-3 pl-6">
+          <h1 className="text-2xl md:text-5xl font-wrap md:text-5xl lg:text-7xl font-bold text-slate-800 mb-4 md:mb-6 font-hoves-extended-extralight">
+            improvisador desde 1993
+          </h1>
         </div>
-      </div>
 
-      <div className="w-full flex-col items-center justify-center bg-white px-6 md:px-12 py-4 text-center md:text-left font-hoves-regular text-xl">
-        <a
-          href="mailto:adolgidoni@gmail.com"
-          className="text-slate-800 hover:text-slate-500"
-        >
-          CONTACT ME
-        </a>
+        <div className="w-full flex items-center justify-end bg-white pt-3 pr-6">
+          <h1 className="text-2xl md:text-5xl font-wrap md:text-5xl lg:text-7xl font-bold text-slate-800 mb-4 md:mb-6 font-hoves-extended-extralight">
+            a partir de 2025
+          </h1>
+        </div>
       </div>
     </>
   );
