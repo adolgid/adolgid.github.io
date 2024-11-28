@@ -22,10 +22,18 @@ export default function AboutMe() {
       <div className="flex">
         <div className="w-full flex items-center justify-between bg-white">
           <div className="w-1/2 p-6 md:p-3">
-            <img src={images[0]} className="md:aspect-[2/2]" alt="Draw 1" />
+            <img
+              src={images[0]}
+              className="w-full md:aspect-[2/2]"
+              alt="Draw 1"
+            />
           </div>
           <div className="w-1/2 p-6 md:p-3">
-            <img src={images[1]} className="md:aspect-[2/2]" alt="Draw 2" />
+            <img
+              src={images[1]}
+              className="w-full md:aspect-[2/2]"
+              alt="Draw 2"
+            />
           </div>
         </div>
       </div>
